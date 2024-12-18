@@ -39,13 +39,14 @@ function Task() {
     }, [task_id, navigate]);
 
     const handleSubmit = () => {
+        setResult('Выполняется...');
         axios.get(`${HostBackend}code_complete/`, { params: { warpLanguage, currentLanguage } })
             .then(response => {
                 if (response.data.status === 'error') {
-                    setResult(response.data.error_text);
+                    setResult('Ошибка: ' + response.data.error_text);
                     return;
                 }
-                setResult(response.data.result);
+                setResult('Результат: ' + response.data.result);
             })
             .catch(error => {
                 console.error("Ошибка запроса", error);
