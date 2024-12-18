@@ -1,0 +1,36 @@
+.dropdown__menu{
+    position: relative;
+    color: var(--white-color);
+    margin: 15px 0;
+}
+
+.dropdown__menu .menu__article{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+}
+
+.dropdown__menu .menu__article .dropdown__arrow{
+    transition: rotate 0.3s ease;
+}
+
+.dropdown__menu .menu__article .dropdown__arrow--active{
+    rotate: 180deg;
+}
+
+.dropdown__menu .menu__list{
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    background-color: var(--grey-color);
+    border-radius: 5px;
+}
+
+.dropdown__menu .menu__list .list__item{
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: 5px 0;
+}

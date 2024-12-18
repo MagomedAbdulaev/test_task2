@@ -1,0 +1,42 @@
+.tasks__list{
+    max-width: 1080px;
+    width: 100%;
+    padding: 40px;
+}
+
+.tasks__list .list__item{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.tasks__list .list__item:first-child{
+    border-bottom: 1px solid var(--grey-color);
+    color: var(--white-color-blur);
+}
+
+.tasks__list .list__item:nth-child(2n){
+    background-color: var(--grey-color);
+}
+
+.tasks__list .list__item .item__name{
+    color: var(--white-color);
+    transition: color 0.25s ease;
+}
+
+.tasks__list .list__item .item__name:hover{
+    color: var(--blue-color);
+}
+
+.difficulty--easy{
+    color: var(--green-color);
+}
+
+.difficulty--medium{
+    color: var(--yellow-color);
+}
+
+.difficulty--hard{
+    color: var(--red-color);
+}
